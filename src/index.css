@@ -1,0 +1,231 @@
+:root {
+  --red: #c21818;
+  --blue: #143c8b;
+  --white: #ffffff;
+  --ink: #0d1321;
+  --muted: #6b7a90;
+  --bg: radial-gradient(
+      1200px 600px at 20% -10%,
+      rgba(255, 0, 0, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      1200px 600px at 120% 10%,
+      rgba(0, 87, 255, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #f7f9ff, #eef3ff);
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.site {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: min(1100px, 96%);
+  margin-inline: auto;
+  padding: 24px 0;
+  flex: 1;
+}
+
+.navWrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(193, 26, 26, 0.96),
+    rgba(20, 60, 139, 0.96)
+  );
+  color: var(--white);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+.nav a.active {
+  background: linear-gradient(90deg, #e43b3b, #1f57c9);
+}
+
+.page h1,
+.page h2 {
+  margin: 12px 0 6px;
+}
+.page .lead {
+  font-size: 1.1rem;
+  color: #1a2540;
+  max-width: 80ch;
+}
+.page {
+  animation: fade 0.35s ease both;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.card {
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #dfe7ff;
+  box-shadow: 0 6px 18px rgba(20, 60, 139, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.card h3 {
+  margin: 0 0 8px;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(20, 60, 139, 0.12);
+  border-color: #b9c8ff;
+}
+
+.facts {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: grid;
+  gap: 14px;
+}
+.fact {
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #e0e8ff;
+  border-left: 6px solid var(--blue);
+  border-radius: 14px;
+}
+.fact h4 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+.fact a {
+  text-decoration: none;
+  color: var(--blue);
+}
+.fact a:hover {
+  text-decoration: underline;
+}
+.fact p {
+  margin: 6px 0 0;
+  color: #2a3858;
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.timelineRow {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e0e8ff;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.year {
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.detail a:hover {
+  text-decoration: underline;
+}
+
+.resList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  gap: 12px;
+}
+.resItem {
+  background: #fff;
+  border: 1px solid #e0e8ff;
+  border-radius: 14px;
+  padding: 14px;
+}
+.resItem a {
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+.resItem a:hover {
+  text-decoration: underline;
+}
+.resItem p {
+  margin: 6px 0 0;
+  color: #2a3858;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+  color: #233456;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 60, 139, 0.08),
+    rgba(193, 26, 26, 0.08)
+  );
+  border-top: 1px solid #dfe7ff;
+}
