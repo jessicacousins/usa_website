@@ -23,8 +23,8 @@ export default function NewEngland() {
         of the nation. The region’s story is made of individuals who acted with
         conviction, towns that grew around principles of local governance, and
         moments where ordinary people decided that freedom was worth sacrifice.
-        The history here is dense, layered, and rooted in
-        faith, courage, and a belief that people can govern themselves.
+        The history here is dense, layered, and rooted in faith, courage, and a
+        belief that people can govern themselves.
       </p>
 
       <p>
@@ -123,9 +123,9 @@ export default function NewEngland() {
           </a>
           —a foundational act of self-government. This simple covenant, created
           aboard a ship anchored off Cape Cod, committed its signers to form a
-          civil body politic guided by just laws. Historians note that its
-          spirit of shared responsibility and community decision-making became a
-          defining feature of New England towns.
+          civil body politic guided by just laws. Its spirit of shared
+          responsibility and community decision-making became a defining feature
+          of New England towns.
         </Fact>
 
         <Fact
@@ -135,19 +135,207 @@ export default function NewEngland() {
           According to the Census Bureau, Boston remains one of the most
           influential cities in the country—driven by education, science,
           medicine, and civic participation. Its modern profile shows a
-          population shaped by centuries of innovation and public
-          service. These numbers reflect a city that continues to evolve while
-          honoring its role as the birthplace of America.
+          population shaped by centuries of innovation and public service. These
+          numbers reflect a city that continues to evolve while honoring its
+          role as the birthplace of America.
         </Fact>
       </ul>
 
+      {/* Freedom Trail map-style grid */}
+      <h3>Freedom Trail: A Walkable Map of Ideas</h3>
       <p>
-        Today, New England’s historical sites—preserved by the
-        National Park Service, Mass.gov, and local archives.
-        They remind us that liberty grows from countless small decisions made by
-        individuals who believed their voices mattered. In the towns, churches,
-        and fields of Massachusetts, the early story of the United States still
-        feels remarkably close, carried forward not only by documents but by the
+        The Freedom Trail is more than a red line on the pavement. It is a map
+        of arguments, prayers, and decisions that moved a people from loyal
+        subjects to self-governing citizens. Each stop is a kind of waypoint in
+        the story of American liberty.
+      </p>
+
+      <div className="cards freedomTrailMap">
+        <div className="card">
+          <h4>Faneuil Hall</h4>
+          <p>
+            Often called the “Cradle of Liberty,” Faneuil Hall hosted meetings
+            where Bostonians debated taxes, representation, and the meaning of
+            freedom. Its Great Hall still echoes with public speech and civic
+            debate.
+          </p>
+          <a
+            href="https://www.nps.gov/places/faneuil-hall.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Faneuil Hall
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Old South Meeting House</h4>
+          <p>
+            The largest indoor gathering place in colonial Boston, it was here
+            that thousands crowded in to decide what to do about the tea. The
+            march to Griffin’s Wharf began at this door.
+          </p>
+          <a
+            href="https://www.nps.gov/bost/learn/historyculture/osmh.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Old South Meeting House
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Old North Church</h4>
+          <p>
+            From the steeple of this church, signal lanterns quietly carried a
+            message across the Charles River—one if by land, two if by sea—so
+            riders could warn the countryside of the British march.
+          </p>
+          <a
+            href="https://www.nps.gov/places/old-north-church.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Old North Church
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Granary Burying Ground</h4>
+          <p>
+            A small burial ground along Tremont Street where patriots such as
+            Paul Revere, Samuel Adams, and John Hancock are laid to rest. It is
+            a reminder that the Revolution was carried by real people with
+            finite lives and enduring legacies.
+          </p>
+          <a
+            href="https://www.nps.gov/places/granary-burying-ground.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Granary Burying Ground
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Paul Revere House</h4>
+          <p>
+            A modest wooden home in the North End, now one of Boston’s oldest
+            surviving houses. From here, a silversmith and father of many set
+            out on the ride that would make his name part of American memory.
+          </p>
+          <a
+            href="https://www.nps.gov/places/paul-revere-house.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Paul Revere House
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Bunker Hill Monument</h4>
+          <p>
+            The granite obelisk on Breed’s Hill marks the first major battle of
+            the Revolution. It honors the courage of citizen-soldiers who held
+            the line long enough to prove that the colonies would not back down.
+          </p>
+          <a
+            href="https://www.nps.gov/places/bunker-hill-monument.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Bunker Hill Monument
+          </a>
+        </div>
+      </div>
+
+      {/* New England Heroes section */}
+      <h3>New England Heroes</h3>
+      <p>
+        History is carried by places, but also by people. New England produced
+        leaders whose lives tied ideas about liberty to concrete action. They
+        were imperfect, serious, and committed. Their work still shapes how we
+        think about courage, duty, and self-government.
+      </p>
+
+      <div className="cards heroesGrid">
+        <div className="card">
+          <h4>John Adams</h4>
+          <p>
+            A Massachusetts lawyer turned revolutionary statesman, Adams argued
+            fiercely for independence, helped draft the Declaration, and later
+            shaped the Massachusetts Constitution. His letters and papers show a
+            mind constantly wrestling with justice, responsibility, and faith.
+          </p>
+          <a
+            href="https://guides.loc.gov/john-adams"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Library of Congress — John Adams Resource Guide
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Paul Revere</h4>
+          <p>
+            Known for a single midnight ride, Revere was also a master
+            silversmith, a veteran of earlier conflicts, and an innovator who
+            later ran a copper works. His life shows how skilled craftsmen and
+            small-business owners became central to the Patriot cause.
+          </p>
+          <a
+            href="https://www.nps.gov/people/paul-revere.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Paul Revere
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Dr. Joseph Warren</h4>
+          <p>
+            A physician, orator, and early leader in the Patriot movement,
+            Warren helped organize resistance in Boston and fell at the Battle
+            of Bunker Hill. Forts and memorials across Massachusetts bear his
+            name, honoring a life cut short but deeply influential.
+          </p>
+          <a
+            href="https://www.nps.gov/people/dr-joseph-warren.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Dr. Joseph Warren
+          </a>
+        </div>
+
+        <div className="card">
+          <h4>Colonel William Prescott</h4>
+          <p>
+            Prescott commanded provincial forces at Bunker Hill, overseeing the
+            overnight construction of the redoubt on Breed’s Hill. His steady
+            leadership under fire became part of New England’s memory of
+            ordinary citizens stepping into extraordinary roles.
+          </p>
+          <a
+            href="https://www.nps.gov/articles/000/william-prescott.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NPS — Colonel William Prescott
+          </a>
+        </div>
+      </div>
+
+      <p>
+        Today, New England’s historical sites—preserved by the National Park
+        Service, Mass.gov, and local archives—invite reflection. They remind us
+        that liberty grows from countless small decisions made by individuals
+        who believed their voices mattered. In the towns, churches, and fields
+        of Massachusetts, the early story of the United States still feels
+        remarkably close, carried forward not only by documents but by the
         places where the nation first found its purpose.
       </p>
     </section>
