@@ -52,7 +52,6 @@ export default function Home() {
       </div>
 
       <div className="homeSections">
-        {/* NEW: Progress at a Glance strip */}
         <section className="homeSummary">
           <div className="homeSummaryHeader">
             <h2>Progress at a Glance</h2>
@@ -135,8 +134,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* existing section cards */}
         <div className="cards">
           <a className="card" href="/founding">
             <h3>Founding Principles</h3>
@@ -164,8 +161,6 @@ export default function Home() {
             <p>Browse official archives, libraries, parks, and data portals.</p>
           </a>
         </div>
-
-        {/* NEW: Era chips row */}
         <section className="homeEras">
           <h2>Explore by Era</h2>
           <div className="homeEraChips">
@@ -187,6 +182,91 @@ export default function Home() {
               <span className="homeEraTitle">Modern America</span>
               <span className="homeEraDates">1945–2025</span>
             </a>
+          </div>
+        </section>
+        {/* Carousel */}
+        <section className="achieveSection">
+          <h2>American Achievements</h2>
+          <p className="achieveLead">
+            Across centuries, Americans have pushed boundaries in science, civic
+            life, exploration, and human potential.
+          </p>
+
+          <div className="achieveCarousel">
+            <div className="achieveTrack">
+              <div className="achieveItem">
+                <h3>First Controlled Flight</h3>
+                <p>Wright Brothers, 1903 — launching the age of aviation.</p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Moon Landing</h3>
+                <p>Apollo 11, 1969 — “One small step for man...”</p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Transcontinental Railroad</h3>
+                <p>1869 — from coast to coast for the first time.</p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Internet Foundations</h3>
+                <p>ARPANET, 1969–1983 — the world goes digital.</p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>National Parks System</h3>
+                <p>Preserving mountains, rivers, monuments & history.</p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Civil Rights Milestones</h3>
+                <p>
+                  Expanding constitutional freedoms and equal protection under
+                  the law.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* grid  */}
+        <section className="usaToday">
+          <h2>United States Today</h2>
+          <p className="usaTodayLead">
+            A continental republic shaped by ideas, driven by innovation, and
+            strengthened by its people.
+          </p>
+
+          <div className="usaGrid">
+            <div className="usaStat">
+              <strong>50</strong>
+              <span>States</span>
+            </div>
+
+            <div className="usaStat">
+              <strong>330M+</strong>
+              <span>Citizens</span>
+            </div>
+
+            <div className="usaStat">
+              <strong>63</strong>
+              <span>National Parks</span>
+            </div>
+
+            <div className="usaStat">
+              <strong>2.6M</strong>
+              <span>Active & Reserve Military</span>
+            </div>
+
+            <div className="usaStat">
+              <strong>5,000+</strong>
+              <span>Museums Nationwide</span>
+            </div>
+
+            <div className="usaStat">
+              <strong>NASA</strong>
+              <span>Deep-Space Missions Operating</span>
+            </div>
           </div>
         </section>
       </div>
