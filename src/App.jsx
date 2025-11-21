@@ -6,6 +6,7 @@ import Founding from "./pages/Founding.jsx";
 import NewEngland from "./pages/NewEngland.jsx";
 import Timeline from "./pages/Timeline.jsx";
 import Resources from "./pages/Resources.jsx";
+import Map from "./pages/Map.jsx";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/new-england" element={<NewEngland />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/map" element={<Map />} />
         </Routes>
       </main>
       <footer className="footer">
