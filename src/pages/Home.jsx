@@ -198,6 +198,84 @@ export default function Home() {
                 <h3>First Controlled Flight</h3>
                 <p>Wright Brothers, 1903 — launching the age of aviation.</p>
               </div>
+              <div className="achieveItem">
+                <h3>Louisiana Purchase</h3>
+                <p>
+                  1803 — The USA doubles in size, securing the Mississippi
+                  River.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Lewis & Clark Expedition</h3>
+                <p>
+                  1804–1806 — Mapping West from the Mississippi to the
+                  Pacific.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Erie Canal</h3>
+                <p>
+                  1825 — Connecting the Great Lakes to the Atlantic,
+                  accelerating commerce and settlement.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Industrial Revolution Leadership</h3>
+                <p>
+                  19th–20th century — Global center for steel, rail,
+                  automobiles, and manufacturing innovation.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Hoover Dam</h3>
+                <p>
+                  1936 — Powering the American West with water, energy, and
+                  economic growth.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Manhattan Project</h3>
+                <p>
+                  1942–1945 — Breakthroughs in physics and national defense.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Interstate Highway System</h3>
+                <p>
+                  1956 — President Eisenhower launches a 41,000-mile network
+                  linking the nation.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Computer Revolution</h3>
+                <p>
+                  1970s–1990s — Microchips, personal computers, and early
+                  software, setting the digital age in motion.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>GPS System</h3>
+                <p>
+                  1978–1995 — A U.S. Department of Defense innovation for
+                  navigation, travel, and communication.
+                </p>
+              </div>
+
+              <div className="achieveItem">
+                <h3>Mars Rovers</h3>
+                <p>
+                  2004–2021 — Spirit, Opportunity, Curiosity, and Perseverance
+                  part of the robotic exploration.
+                </p>
+              </div>
 
               <div className="achieveItem">
                 <h3>Moon Landing</h3>
