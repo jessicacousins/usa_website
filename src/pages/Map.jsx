@@ -93,6 +93,69 @@ export default function Map() {
             className="mapShape"
             aria-label="Stylized map of the United States"
           >
+            <div className="mapWireframe" aria-hidden="true">
+              <svg
+                className="mapWireframeSvg"
+                viewBox="0 0 100 60"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <rect
+                  className="mapWireframeStroke"
+                  x="6"
+                  y="10"
+                  width="88"
+                  height="40"
+                  rx="10"
+                  ry="10"
+                />
+
+                <line
+                  className="mapWireframeStroke mapWireframeStroke--light"
+                  x1="10"
+                  y1="18"
+                  x2="90"
+                  y2="18"
+                />
+                <line
+                  className="mapWireframeStroke mapWireframeStroke--light"
+                  x1="10"
+                  y1="26"
+                  x2="90"
+                  y2="26"
+                />
+                <line
+                  className="mapWireframeStroke mapWireframeStroke--light"
+                  x1="10"
+                  y1="34"
+                  x2="90"
+                  y2="34"
+                />
+                <line
+                  className="mapWireframeStroke mapWireframeStroke--light"
+                  x1="10"
+                  y1="42"
+                  x2="90"
+                  y2="42"
+                />
+
+                <path
+                  className="mapWireframeStroke mapWireframeStroke--soft"
+                  d="M8 20 Q 28 10 50 16 T 92 24"
+                />
+                <path
+                  className="mapWireframeStroke mapWireframeStroke--soft"
+                  d="M8 40 Q 30 52 54 46 T 92 38"
+                />
+
+                <circle className="mapWireframeStar" cx="22" cy="32" r="1.4" />
+                <circle className="mapWireframeStar" cx="35" cy="28" r="1.4" />
+                <circle className="mapWireframeStar" cx="46" cy="38" r="1.4" />
+                <circle className="mapWireframeStar" cx="60" cy="30" r="1.4" />
+                <circle className="mapWireframeStar" cx="74" cy="24" r="1.4" />
+                <circle className="mapWireframeStar" cx="80" cy="16" r="1.4" />
+              </svg>
+            </div>
+
             {REGIONS.map((region) => (
               <button
                 key={region.id}
