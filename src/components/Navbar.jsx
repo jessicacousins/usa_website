@@ -13,6 +13,7 @@ export default function Navbar() {
         <NavLink to="/new-england">New England</NavLink>
         <NavLink to="/timeline">Timeline</NavLink>
         <NavLink to="/resources">Resources</NavLink>
+        <NavLink to="/map">Map</NavLink>
       </nav>
     </header>
   );
