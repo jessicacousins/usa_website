@@ -1,0 +1,279 @@
+.civicPage {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.civicHeader {
+  max-width: 880px;
+  margin: 0 auto 1.5rem auto;
+  text-align: left;
+}
+
+.civicKicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--accent-soft, #7bd3ff);
+  margin-bottom: 0.75rem;
+}
+
+.civicTitle {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.civicLead {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 52rem;
+  color: rgba(232, 236, 255, 0.84);
+}
+
+.civicQuickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+.civicQuickLink {
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(132, 192, 255, 0.6);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #f7fbff;
+  background: radial-gradient(
+      circle at top left,
+      rgba(120, 184, 255, 0.3),
+      transparent
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 94, 148, 0.25),
+      transparent
+    );
+  box-shadow: 0 0 18px rgba(96, 167, 255, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.civicQuickLink:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 26px rgba(139, 210, 255, 0.6);
+  background: radial-gradient(
+      circle at top left,
+      rgba(160, 210, 255, 0.45),
+      transparent
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 123, 171, 0.35),
+      transparent
+    );
+}
+
+/* Rights section */
+
+.civicRights h2,
+.civicChecklistSection h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.civicSub {
+  max-width: 44rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(210, 220, 255, 0.85);
+  margin-bottom: 1.5rem;
+}
+
+.civicRightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.civicCard {
+  position: relative;
+  padding: 1.1rem 1.1rem 1.2rem 1.1rem;
+  border-radius: 1.4rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(122, 189, 255, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 107, 172, 0.18),
+      transparent 55%
+    ),
+    rgba(6, 10, 32, 0.98);
+  border: 1px solid rgba(132, 192, 255, 0.38);
+  box-shadow: 0 20px 30px rgba(4, 6, 20, 0.9);
+  overflow: hidden;
+}
+
+.civicCardGlow {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+      circle at 20% 0%,
+      rgba(180, 231, 255, 0.2),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 100%,
+      rgba(255, 184, 214, 0.16),
+      transparent 55%
+    );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.civicCard:hover .civicCardGlow {
+  opacity: 1;
+}
+
+.civicCard h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.civicCard p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(224, 233, 255, 0.9);
+  margin-bottom: 0.8rem;
+}
+
+.civicCardLink {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: rgba(166, 214, 255, 0.95);
+  border-bottom: 1px dashed rgba(166, 214, 255, 0.7);
+  padding-bottom: 1px;
+}
+
+/* Checklist */
+
+.civicChecklistSection {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 2.2rem;
+  align-items: flex-start;
+}
+
+.civicChecklistIntro p {
+  font-size: 0.95rem;
+  color: rgba(214, 225, 255, 0.9);
+  max-width: 26rem;
+}
+
+.civicChecklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.civicChecklistItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(138, 198, 255, 0.28);
+  padding: 0.7rem 0.9rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(120, 188, 255, 0.2),
+      transparent 60%
+    ),
+    rgba(7, 13, 36, 0.96);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background 0.15s ease;
+}
+
+.civicChecklistItem:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.55);
+  border-color: rgba(173, 222, 255, 0.7);
+}
+
+.civicChecklistItem.is-checked {
+  background: radial-gradient(
+      circle at top left,
+      rgba(133, 230, 188, 0.25),
+      transparent 60%
+    ),
+    rgba(6, 18, 36, 0.98);
+  border-color: rgba(144, 255, 209, 0.9);
+}
+
+.civicChecklistBox {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.18rem;
+  border-radius: 0.35rem;
+  border: 2px solid rgba(166, 214, 255, 0.75);
+  box-shadow: 0 0 0 1px rgba(3, 7, 23, 0.9), 0 0 10px rgba(130, 192, 255, 0.5);
+  position: relative;
+}
+
+.civicChecklistItem.is-checked .civicChecklistBox::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 0.2rem;
+  background: linear-gradient(135deg, #5dffb3, #7bffea);
+  box-shadow: 0 0 12px rgba(125, 255, 210, 0.8);
+}
+
+.civicChecklistText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(228, 236, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.civicChecklistLink a {
+  font-size: 0.78rem;
+  color: rgba(164, 209, 255, 0.95);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(164, 209, 255, 0.7);
+}
+
+
+
+.civicFooterNote {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgba(170, 184, 220, 0.9);
+}
+
+
+
+@media (max-width: 900px) {
+  .civicChecklistSection {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .civicHeader {
+    text-align: left;
+  }
+
+  .civicQuickLinks {
+    justify-content: flex-start;
+  }
+}
