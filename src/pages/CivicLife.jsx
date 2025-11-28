@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import "./CivicLife.css";
 
@@ -91,6 +92,101 @@ const checklistItems = [
   },
 ];
 
+const timelineItems = [
+  {
+    id: "1789",
+    era: "early",
+    title: "1789 — First Congress Establishes Citizenship Duties",
+    summary: "Early laws define naturalization, courts, and jury procedures.",
+    detail:
+      "The First Congress implemented the Constitution by creating federal courts, passing the Judiciary Act, and adopting early naturalization statutes. Those choices shaped how people became citizens and how juries would operate in federal courts.",
+    href: "https://www.archives.gov/founding-docs",
+    source: "Archives — Founding Documents",
+  },
+  {
+    id: "1870",
+    era: "civil",
+    title: "1870 — 15th Amendment Expands Voting Rights",
+    summary:
+      "Prohibits denial of voting based on race, color, or previous slavery.",
+    detail:
+      "After the Civil War, the 15th Amendment placed a constitutional limit on state and federal governments: they could no longer restrict the vote on the basis of race, color, or previous condition of servitude, affirming a broader civic role for formerly enslaved people.",
+    href: "https://constitution.congress.gov/amendment/15/",
+    source: "Congress.gov — 15th Amendment",
+  },
+  {
+    id: "1920",
+    era: "civil",
+    title: "1920 — Women Gain the Right to Vote",
+    summary: "The 19th Amendment extends suffrage to women nationwide.",
+    detail:
+      "Decades of petitions, marches, and advocacy culminated in the 19th Amendment, which barred denying the vote on the basis of sex. It significantly expanded the number of citizens with a direct voice in elections.",
+    href: "https://constitution.congress.gov/browse/essay/amdt19-3-4/ALDE_00013827/['nineteenth']",
+    source: "Congress.gov — 19th Amendment",
+  },
+  {
+    id: "1940",
+    era: "modern",
+    title: "1940 — Selective Training & Service Act",
+    summary:
+      "Establishes the first peacetime draft and defines military obligations.",
+    detail:
+      "On the eve of World War II, Congress passed the first peacetime conscription law in U.S. history. It outlined who could be called to serve, reinforcing the idea that defense of the country is a shared civic responsibility.",
+    href: "https://www.archives.gov/st-louis/selective-service?_ga=2.142541938.1360524298.1764301957-2091475462.1764212556",
+    source: "National Archives — WWII Records",
+  },
+  {
+    id: "1965",
+    era: "civil",
+    title: "1965 — Voting Rights Act",
+    summary:
+      "Eliminates barriers that prevented equal participation in elections.",
+    detail:
+      "The Voting Rights Act targeted practices such as literacy tests and other barriers that undermined the 15th Amendment. Enforcement mechanisms increased the federal role in protecting access to the ballot.",
+    href: "https://www.archives.gov/milestone-documents/voting-rights-act",
+    source: "Archives — Voting Rights Act",
+  },
+  {
+    id: "1971",
+    era: "civil",
+    title: "1971 — Voting Age Lowered to 18",
+    summary:
+      "The 26th Amendment expands civic responsibility to younger citizens.",
+    detail:
+      "Against the backdrop of the Vietnam War, the 26th Amendment aligned voting age with the age of military service, bringing millions of younger Americans formally into the electorate.",
+    href: "https://constitution.congress.gov/browse/essay/amdt26-2-8/ALDE_00013945/['Voting',%20'Rights26th',%20'Amendment']",
+    source: "Congress.gov — 26th Amendment",
+  },
+  {
+    id: "2002",
+    era: "modern",
+    title: "2002 — Help America Vote Act",
+    summary: "National standards improve election systems and voting access.",
+    detail:
+      "The Help America Vote Act (HAVA) introduced federal standards for election administration, encouraged the modernization of voting equipment, and supported more consistent voter registration systems across states.",
+    href: "https://www.eac.gov",
+    source: "U.S. Election Assistance Commission",
+  },
+  {
+    id: "present",
+    era: "modern",
+    title: "Present — Expanding Civic Participation",
+    summary:
+      "Modern civic tools include online registration, digital hearings, and accessible election resources for all voters.",
+    detail:
+      "Today, voters use official portals to register, track ballots, and study issues. Remote and accessible formats for hearings and meetings make it easier for more citizens to stay informed and involved.",
+    href: "https://www.usa.gov/voting",
+    source: "USA.gov — Voting Resources",
+  },
+];
+
+const timelineFilters = [
+  { id: "all", label: "All Eras" },
+  { id: "early", label: "Early Republic" },
+  { id: "civil", label: "Civil Rights & Suffrage" },
+  { id: "modern", label: "Modern Civic Reforms" },
+];
+
 export default function CivicLife() {
   const [checked, setChecked] = useState(() => {
     if (typeof window === "undefined") return {};
@@ -101,6 +197,9 @@ export default function CivicLife() {
       return {};
     }
   });
+
+  const [selectedEra, setSelectedEra] = useState("all");
+  const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -114,8 +213,18 @@ export default function CivicLife() {
     }));
   };
 
+  const handleToggleCard = (id) => {
+    setExpandedId((current) => (current === id ? null : id));
+  };
+
+  const filteredTimeline =
+    selectedEra === "all"
+      ? timelineItems
+      : timelineItems.filter((item) => item.era === selectedEra);
+
   return (
     <section className="page civicPage">
+      {/* HEADER */}
       <header className="civicHeader">
         <p className="civicKicker">Practicing citizenship</p>
         <h1 className="civicTitle">
@@ -157,6 +266,7 @@ export default function CivicLife() {
         </div>
       </header>
 
+      {/* RIGHTS SECTION  */}
       <section className="civicRights">
         <h2>Rights & Responsibilities from Official Sources</h2>
         <p className="civicSub">
@@ -183,6 +293,7 @@ export default function CivicLife() {
         </div>
       </section>
 
+      {/* CHECKLIST  */}
       <section className="civicChecklistSection">
         <div className="civicChecklistIntro">
           <h2>Your Civic Habits Checklist</h2>
@@ -220,138 +331,70 @@ export default function CivicLife() {
         </div>
       </section>
 
-      {/* timeline  */}
+      {/* TIMELINE WITH FILTERS + CONNECTOR + EXPAND */}
       <section className="civicTimelineSection">
         <h2 className="timelineTitle">Civic Duties Over Time</h2>
         <p className="timelineLead">
           American civic duties expanded through constitutional amendments,
-          federal legislation, and evolving democratic norms. Explore key
-          milestones below.
+          federal legislation, and evolving democratic norms. Use the filters
+          below to explore different eras, then click a card to see more detail.
         </p>
 
+        <div className="timelineFilters">
+          {timelineFilters.map((filter) => (
+            <button
+              key={filter.id}
+              type="button"
+              className={`timelineFilterBtn ${
+                selectedEra === filter.id ? "is-active" : ""
+              }`}
+              onClick={() => setSelectedEra(filter.id)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         <div className="civicTimeline">
-          <div className="timelineItem neonBlock">
-            <h3>1789 — First Congress Establishes Citizenship Duties</h3>
-            <p>
-              Early laws define naturalization, courts, and jury procedures.
-            </p>
-            <a
-              href="https://www.archives.gov/founding-docs"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              Archives — Founding Documents
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>1870 — 15th Amendment Expands Voting Rights</h3>
-            <p>
-              Prohibits denial of voting based on race, color, or previous
-              slavery.
-            </p>
-            <a
-              href="https://constitution.congress.gov/amendment/15/"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              Congress.gov — 15th Amendment
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>1920 — Women Gain the Right to Vote</h3>
-            <p>The 19th Amendment extends suffrage to women nationwide.</p>
-            <a
-              href="https://constitution.congress.gov/browse/essay/amdt19-3-4/ALDE_00013827/['nineteenth']"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              Congress.gov — 19th Amendment
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>1940 — Selective Training & Service Act</h3>
-            <p>
-              Establishes the first peacetime draft and defines military
-              obligations.
-            </p>
-            <a
-              href="https://www.archives.gov/st-louis/selective-service?_ga=2.142541938.1360524298.1764301957-2091475462.1764212556"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              National Archives — WWII Records
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>1965 — Voting Rights Act</h3>
-            <p>
-              Eliminates barriers that prevented equal participation in
-              elections.
-            </p>
-            <a
-              href="https://www.archives.gov/milestone-documents/voting-rights-act"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              Archives — Voting Rights Act
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>1971 — Voting Age Lowered to 18</h3>
-            <p>
-              The 26th Amendment expands civic responsibility to younger
-              citizens.
-            </p>
-            <a
-              href="https://constitution.congress.gov/browse/essay/amdt26-2-8/ALDE_00013945/['Voting',%20'Rights26th',%20'Amendment']"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              Congress.gov — 26th Amendment
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock">
-            <h3>2002 — Help America Vote Act</h3>
-            <p>
-              National standards improve election systems and voting access.
-            </p>
-            <a
-              href="https://www.eac.gov"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              U.S. Election Assistance Commission
-            </a>
-          </div>
-
-          <div className="timelineItem neonBlock finalPulse">
-            <h3>Present — Expanding Civic Participation</h3>
-            <p>
-              Modern civic tools include online registration, digital hearings,
-              and accessible election resources for all voters.
-            </p>
-            <a
-              href="https://www.usa.gov/voting"
-              target="_blank"
-              rel="noreferrer"
-              className="timelineLink"
-            >
-              USA.gov — Voting Resources
-            </a>
-          </div>
+          {filteredTimeline.map((item, index) => {
+            const isExpanded = expandedId === item.id;
+            const isFinal = item.id === "present";
+            return (
+              <article
+                key={item.id}
+                className={`timelineItem neonBlock ${
+                  isExpanded ? "is-expanded" : ""
+                } ${isFinal ? "finalPulse" : ""}`}
+                onClick={() => handleToggleCard(item.id)}
+              >
+                <div className="timelineHeaderRow">
+                  <h3>{item.title}</h3>
+                  <span className="timelineEraTag">
+                    {item.era === "early"
+                      ? "Early Republic"
+                      : item.era === "civil"
+                      ? "Civil Rights & Suffrage"
+                      : "Modern Civic Reforms"}
+                  </span>
+                  <span
+                    className={`timelineCaret ${isExpanded ? "is-open" : ""}`}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p>{item.summary}</p>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="timelineLink"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {item.source}
+                </a>
+                {isExpanded && <p className="timelineExtra">{item.detail}</p>}
+              </article>
+            );
+          })}
         </div>
       </section>
 
