@@ -122,12 +122,11 @@ export default function CivicLife() {
           Civic Life: Rights, Duties, and Daily Habits
         </h1>
         <p className="civicLead">
-          The Founders grounded the nation in natural-rights philosophy drawn
-          from Enlightenment thinkers such as John Locke—holding that rights
-          come not from rulers but from “Nature and Nature’s God,” a phrase used
-          in the Declaration of Independence. This page gathers official
-          tools—from voter information to jury service and constitutional
-          guides.
+          The Founders grounded the nation in Enlightenment natural-rights
+          philosophy— the idea that rights originate above government authority
+          and citizens help preserve them through active participation. This
+          page gathers official civic tools including voting information, jury
+          guidance, and constitutional resources.
         </p>
 
         <div className="civicQuickLinks">
@@ -162,10 +161,9 @@ export default function CivicLife() {
         <h2>Rights & Responsibilities from Official Sources</h2>
         <p className="civicSub">
           Federal agencies describe citizenship as a blend of freedoms and
-          obligations—voting, learning the law, serving on juries, and
+          obligations— voting, learning the law, serving on juries, and
           supporting the Constitution in daily life.
         </p>
-
         <div className="civicRightsGrid">
           {rightsCards.map((card) => (
             <article key={card.id} className="civicCard">
@@ -222,6 +220,142 @@ export default function CivicLife() {
         </div>
       </section>
 
+      {/* timeline  */}
+      <section className="civicTimelineSection">
+        <h2 className="timelineTitle">Civic Duties Over Time</h2>
+        <p className="timelineLead">
+          American civic duties expanded through constitutional amendments,
+          federal legislation, and evolving democratic norms. Explore key
+          milestones below.
+        </p>
+
+        <div className="civicTimeline">
+          <div className="timelineItem neonBlock">
+            <h3>1789 — First Congress Establishes Citizenship Duties</h3>
+            <p>
+              Early laws define naturalization, courts, and jury procedures.
+            </p>
+            <a
+              href="https://www.archives.gov/founding-docs"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              Archives — Founding Documents
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>1870 — 15th Amendment Expands Voting Rights</h3>
+            <p>
+              Prohibits denial of voting based on race, color, or previous
+              slavery.
+            </p>
+            <a
+              href="https://constitution.congress.gov/amendment/15/"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              Congress.gov — 15th Amendment
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>1920 — Women Gain the Right to Vote</h3>
+            <p>The 19th Amendment extends suffrage to women nationwide.</p>
+            <a
+              href="https://constitution.congress.gov/browse/essay/amdt19-3-4/ALDE_00013827/['nineteenth']"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              Congress.gov — 19th Amendment
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>1940 — Selective Training & Service Act</h3>
+            <p>
+              Establishes the first peacetime draft and defines military
+              obligations.
+            </p>
+            <a
+              href="https://www.archives.gov/st-louis/selective-service?_ga=2.142541938.1360524298.1764301957-2091475462.1764212556"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              National Archives — WWII Records
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>1965 — Voting Rights Act</h3>
+            <p>
+              Eliminates barriers that prevented equal participation in
+              elections.
+            </p>
+            <a
+              href="https://www.archives.gov/milestone-documents/voting-rights-act"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              Archives — Voting Rights Act
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>1971 — Voting Age Lowered to 18</h3>
+            <p>
+              The 26th Amendment expands civic responsibility to younger
+              citizens.
+            </p>
+            <a
+              href="https://constitution.congress.gov/browse/essay/amdt26-2-8/ALDE_00013945/['Voting',%20'Rights26th',%20'Amendment']"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              Congress.gov — 26th Amendment
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock">
+            <h3>2002 — Help America Vote Act</h3>
+            <p>
+              National standards improve election systems and voting access.
+            </p>
+            <a
+              href="https://www.eac.gov"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              U.S. Election Assistance Commission
+            </a>
+          </div>
+
+          <div className="timelineItem neonBlock finalPulse">
+            <h3>Present — Expanding Civic Participation</h3>
+            <p>
+              Modern civic tools include online registration, digital hearings,
+              and accessible election resources for all voters.
+            </p>
+            <a
+              href="https://www.usa.gov/voting"
+              target="_blank"
+              rel="noreferrer"
+              className="timelineLink"
+            >
+              USA.gov — Voting Resources
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer className="civicFooterNote">
         <p>
           All links on this page go to official U.S. government sites, so you

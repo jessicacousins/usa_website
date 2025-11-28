@@ -251,16 +251,12 @@
   border-bottom: 1px dotted rgba(164, 209, 255, 0.7);
 }
 
-
-
 .civicFooterNote {
   margin-top: 1rem;
   font-size: 0.8rem;
   text-align: center;
   color: rgba(170, 184, 220, 0.9);
 }
-
-
 
 @media (max-width: 900px) {
   .civicChecklistSection {
@@ -275,5 +271,95 @@
 
   .civicQuickLinks {
     justify-content: flex-start;
+  }
+}
+
+.civicTimelineSection {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timelineTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #b4dcff;
+  text-shadow: 0 0 12px rgba(80, 160, 255, 0.7);
+}
+
+.timelineLead {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(210, 225, 255, 0.85);
+}
+
+.civicTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.neonBlock {
+  padding: 1.2rem 1.4rem;
+  border-radius: 1rem;
+  background: rgba(5, 8, 20, 0.85);
+  border: 1px solid rgba(90, 170, 255, 0.45);
+  box-shadow: 0 0 20px rgba(100, 190, 255, 0.4),
+    inset 0 0 18px rgba(80, 160, 255, 0.25);
+  animation: slideUpFade 0.8s ease both;
+}
+
+.neonBlock h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: #d8eaff;
+  text-shadow: 0 0 10px rgba(100, 180, 255, 0.6);
+}
+
+.neonBlock p {
+  color: rgba(225, 235, 255, 0.85);
+  font-size: 0.9rem;
+}
+
+.timelineLink {
+  margin-top: 0.4rem;
+  display: inline-block;
+  font-size: 0.82rem;
+  color: #93d2ff;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(150, 210, 255, 0.55);
+  padding-bottom: 1px;
+}
+
+.finalPulse {
+  animation: slideUpFade 0.8s ease both, neonPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(100, 190, 255, 0.35),
+      inset 0 0 14px rgba(80, 160, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(130, 220, 255, 0.75),
+      inset 0 0 22px rgba(110, 200, 255, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(100, 190, 255, 0.35),
+      inset 0 0 14px rgba(80, 160, 255, 0.2);
   }
 }
