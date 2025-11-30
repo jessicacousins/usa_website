@@ -1,5 +1,83 @@
 import React from "react";
 
+const stateGroups = [
+  {
+    label: "New England",
+    blurb:
+      "Harbors, town greens, and many of the earliest self-governing communities.",
+    states: [
+      "Maine",
+      "New Hampshire",
+      "Vermont",
+      "Massachusetts",
+      "Rhode Island",
+      "Connecticut",
+    ],
+  },
+  {
+    label: "Mid-Atlantic",
+    blurb: "Commercial ports, early industry, and key Constitutional debates.",
+    states: ["New York", "New Jersey", "Pennsylvania", "Delaware", "Maryland"],
+  },
+  {
+    label: "South",
+    blurb:
+      "From colonial capitals to modern innovation corridors and coastal gateways.",
+    states: [
+      "Virginia",
+      "North Carolina",
+      "South Carolina",
+      "Georgia",
+      "Florida",
+      "Alabama",
+      "Mississippi",
+      "Louisiana",
+      "Tennessee",
+      "Kentucky",
+      "West Virginia",
+      "Arkansas",
+    ],
+  },
+  {
+    label: "Midwest",
+    blurb:
+      "Heartland farms, Great Lakes cities, and major manufacturing centers.",
+    states: [
+      "Ohio",
+      "Indiana",
+      "Illinois",
+      "Michigan",
+      "Wisconsin",
+      "Minnesota",
+      "Iowa",
+      "Missouri",
+      "North Dakota",
+      "South Dakota",
+      "Nebraska",
+      "Kansas",
+    ],
+  },
+  {
+    label: "Mountain West",
+    blurb: "High plains, mountain ranges, and vast public lands.",
+    states: [
+      "Montana",
+      "Wyoming",
+      "Colorado",
+      "New Mexico",
+      "Idaho",
+      "Utah",
+      "Nevada",
+    ],
+  },
+  {
+    label: "Pacific & Non-Contiguous",
+    blurb:
+      "Pacific coasts and island states that extend the map far beyond the mainland.",
+    states: ["Washington", "Oregon", "California", "Alaska", "Hawaii"],
+  },
+];
+
 export default function Home() {
   return (
     <section className="page homePage">
@@ -452,6 +530,37 @@ export default function Home() {
               <strong>NASA</strong>
               <span>Deep-Space Missions Operating</span>
             </div>
+          </div>
+        </section>
+
+        {/* 50 states overview */}
+        <section className="statesSection">
+          <div className="statesHeader">
+            <h2>All 50 States at a Glance</h2>
+            <p className="statesLead">
+              From New England harbors to Pacific coasts and island capitals,
+              fifty states form one constitutional union. Hover over each region
+              to see its states and how they fit into the larger American map.
+            </p>
+          </div>
+
+          <div className="statesGrid">
+            {stateGroups.map((group) => (
+              <article key={group.label} className="stateColumn">
+                <header className="stateColumnHeader">
+                  <h3>{group.label}</h3>
+                  <p>{group.blurb}</p>
+                </header>
+                <ul className="stateList">
+                  {group.states.map((state) => (
+                    <li key={state} className="stateTag">
+                      <span className="stateDot" aria-hidden="true" />
+                      <span className="stateName">{state}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
       </div>

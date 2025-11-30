@@ -1120,3 +1120,149 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.02em;
 }
+
+/* STATES  */
+
+.statesSection {
+  margin-top: 56px;
+}
+
+.statesHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.statesHeader h2 {
+  margin: 0;
+}
+
+.statesLead {
+  margin: 0;
+  max-width: 70ch;
+  font-size: 0.96rem;
+  color: #d6def5;
+}
+
+.statesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stateColumn {
+  position: relative;
+  padding: 16px 16px 14px;
+  border-radius: 18px;
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 81, 102, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 110% 110%,
+      rgba(43, 87, 255, 0.18),
+      transparent 60%
+    ),
+    #050814;
+  border: 1px solid rgba(145, 176, 255, 0.7);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.stateColumn::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+      circle at 10% 0%,
+      rgba(255, 81, 102, 0.26),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 120% 120%,
+      rgba(43, 87, 255, 0.22),
+      transparent 60%
+    );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.stateColumn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
+  border-color: #ffffff;
+}
+
+.stateColumn:hover::before {
+  opacity: 1;
+}
+
+.stateColumnHeader h3 {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+}
+
+.stateColumnHeader p {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  color: #c6d0f0;
+}
+
+.stateList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stateTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(8, 14, 40, 0.96);
+  border: 1px solid rgba(159, 191, 255, 0.8);
+  font-size: 0.78rem;
+  color: #edf1ff;
+  box-shadow: 0 0 12px rgba(30, 76, 160, 0.6);
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    border-color 0.16s ease, background 0.16s ease;
+}
+
+.stateTag:hover {
+  transform: translateY(-1px);
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 81, 102, 0.32),
+      transparent 70%
+    ),
+    rgba(8, 14, 40, 0.98);
+  border-color: #ffffff;
+  box-shadow: 0 0 18px rgba(111, 189, 255, 0.9);
+}
+
+.stateDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #ffd76c, #ff5166);
+  box-shadow: 0 0 8px rgba(255, 215, 108, 0.9);
+}
+
+.stateName {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .statesSection {
+    margin-top: 40px;
+  }
+}
