@@ -4,6 +4,12 @@
 
 Fact-based React + Vite website outlining the story of the United States from the colonial era to 2025. Content highlights America’s founding ideals, major achievements, regional history, and cultural development; with every fact linked directly to official U.S. government sources. Includes features such as animated full-width hero sections, interactive maps, multi-layer parallax achievement carousels, and dedicated pages for the Founding, New England, national timelines, and federal resources. Built for clarity, accuracy, and accessibility across all screen sizes.
 
+Live at:
+
+```
+https://usa1776.netlify.app/
+```
+
 ## License & Attribution
 
 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). You are free to:
