@@ -285,7 +285,7 @@
 /* “stars” / nodes */
 
 .mapWireframeStar {
-  fill: url(#none); 
+  fill: url(#none);
   fill: #ffffff;
   stroke: rgba(255, 255, 255, 0.4);
   stroke-width: 0.4;
