@@ -14,6 +14,7 @@ export default function Navbar() {
         <NavLink to="/timeline">Timeline</NavLink>
         <NavLink to="/resources">Resources</NavLink>
         <NavLink to="/map">Map</NavLink>
+        <NavLink to="/civic-life">Civic Life</NavLink>
       </nav>
     </header>
   );
