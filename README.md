@@ -2,7 +2,7 @@
 
 ## Description
 
-Fact-based React + Vite website outlining the story of the United States from the colonial era to 2025. Content highlights America’s founding ideals, major achievements, regional history, and cultural development; with every fact linked directly to official U.S. government sources. Includes features such as animated full-width hero sections, interactive maps, multi-layer parallax achievement carousels, and dedicated pages for the Founding, New England, national timelines, and federal resources. Built for clarity, accuracy, and accessibility across all screen sizes.
+A fact-driven React + Vite website presenting the United States from the colonial era to 2025. It highlights founding ideals, major achievements, regional history, and cultural development, with every fact linked to official government sources. Features include animated hero sections, interactive maps, parallax achievements, and dedicated pages for the Founding, New England, timelines, and federal resources—designed for clarity and accessibility on all devices.
 
 ## Live at:
 
